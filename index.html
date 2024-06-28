@@ -75,9 +75,8 @@
             const rightAverage = rightPredictions.length ? (rightPredictions.reduce((a, b) => a + b, 0) / rightPredictions.length).toFixed(2) : 0;
             const leftAverage = leftPredictions.length ? (leftPredictions.reduce((a, b) => a + b, 0) / leftPredictions.length).toFixed(2) : 0;
 
-            const result = `Right Average: ${rightAverage}, Left Average: ${leftAverage}, Higher: ${rightAverage >= leftAverage ? 'Right' : 'Left'}`;
-
-            document.getElementById("result-container").innerHTML = result;
+            const higherLabel = rightAverage >= leftAverage ? 'Right' : 'Left';
+            document.getElementById("result-container").innerHTML = higherLabel;
 
             rightPredictions = [];
             leftPredictions = [];
