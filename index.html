@@ -90,7 +90,6 @@
             if ((highestPrediction === "class 1" || highestPrediction === "class 2") && highestPrediction !== previousClass) {
                 if ((previousClass === "class 1" && highestPrediction === "class 2") || (previousClass === "class 2" && highestPrediction === "class 1")) {
                     count++;
-                    document.getElementById("count-container").innerText = "Count: " + count;
                 }
                 previousClass = highestPrediction;
             }
