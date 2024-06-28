@@ -8,7 +8,6 @@
 </head>
 <body>
     <div>Teachable Machine Pose Model</div>
-    <button type="button" onclick="init()">Start</button>
     <div><canvas id="canvas"></canvas></div>
     <div id="label-container"></div>
     <div id="count-container">Count: 0</div>
@@ -21,8 +20,9 @@
         let previousClass = null;
         let count = 0;
 
-        window.onload = function() {
+        window.onload = async function() {
             startCountdown(30);
+            await init();
         }
 
         function startCountdown(seconds) {
